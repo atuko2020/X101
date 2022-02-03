@@ -1,0 +1,57 @@
+<!--2021/07/12 更新-->
+
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>X101_</title>
+    <meta name="description" content="表組みの基本">
+</head>
+
+
+<body>
+    <div id=“container”>
+    <header>
+        <h1>X101アンケート２</h1>
+    </header>
+    <!--/header-->
+
+    <main>
+    <form action="#" method="POST" name="contact-from">
+        <label>出席番号を入力してください。
+        <input type="text" name="name" required pattern="[A|B|X|S|P][1-9]{3}"  placeholder="ex.X100"></label>
+        <br>
+        
+        <label>bananaとcherryとorangeのどれが好き？
+                <input type="text" name="name" required pattern="[Bb]anana|[Cc]herry|[Oo]range"  placeholder="Banana"></label>
+
+        <label>どのくらい要ります？
+            <input type="number" name="count" pattern="[0-9]{11,}" placeholder="">
+        </label>
+
+        <input type="image" src="images/button.png" alt="送信する">
+
+       
+        </form>
+    </main>
+
+    <footer>
+            <p>Last Modified:
+                <script>
+                  var modified = new Date(document.lastModified);
+                  var year = modified.getFullYear();
+                  var month = modified.getMonth() + 1;
+                  var date = modified.getDate();
+                  var day = modified.getDay() ;
+                  document.write(year + "年" + month + "月" + date + "日");
+                </script>            
+            </p>
+            <p><small>&copy;Hanako Sundai, All Rights Reserved.</small></p>
+        </footer><!--/Footer-->
+
+    </div>
+</body>
+
+
+</html>

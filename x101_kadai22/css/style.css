@@ -1,0 +1,172 @@
+@charset "utf-8";
+body{
+    background-image: url(../images/bg.png);
+    margin: 0;
+}
+
+#container{
+    width: 100%;
+    text-align: center;
+}
+header{
+    height: 300px;
+    background: rgb(255, 170, 170);
+}
+
+#owner dt{
+    position: relative;
+    float: left;
+    width: 50%;
+    text-align: center;
+    left: 25%;
+}
+
+#owner dt::after{
+    content: ":";
+    margin-right: 5%;
+}
+
+dd {
+    float: left;
+    text-align: center;
+    right: 20%;
+  }
+
+
+
+main{
+    overflow: hidden;
+    width: 80%;
+    min-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(255, 221, 221);
+    padding: 1rem 0;
+}
+
+section{
+    width: 90%;
+    text-align: center;
+    justify-content:center;
+    margin: 0 0 2rem 0;
+    padding: 0 0 0 5%;
+    text-align: center;
+    overflow:hidden;
+}
+
+section img{
+    width: 35%;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+
+main section:nth-child(1) p{
+    width: 55%;
+    min-width: 320px;
+    margin: 0 1rem;
+    box-sizing: border-box;
+    float: left;
+}
+
+main section:nth-child(1) img{
+    padding-right: 1rem;
+}
+
+main section:nth-child(2) p{
+    min-width: 320px;
+    margin: 0 1rem;
+    box-sizing: border-box;
+    float: center;
+}
+
+main section:nth-child(3) p{
+    width: 55%;
+    min-width: 320px;
+    margin: 0 1rem;
+    box-sizing: border-box;
+    float: right;
+}
+
+main section:nth-child(3) img{
+    padding-left: 1rem;
+}
+
+h1{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    margin: 0;
+    padding: 1rem 1rem 0;
+}
+    
+h2{
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    color: rgb(139, 102, 211);
+    padding: 0.5rem 0.5rem 0;
+    border-width: 0 0 4px 6px; 
+    border-style: ridge; 
+    border-color: aqua;
+    
+   
+}
+
+p{
+    font-family: "ヒラギノ丸ゴ Pro W4","Hiragino Maru Gothic Pro", sans-serif;
+    text-align: justify;
+    line-height: 1.7;
+    color: rgb(0, 0, 0);
+    padding: 0 1rem;
+}
+
+q{
+    font-size: 1.2rem;
+}
+
+.footer{
+    width: 100%;
+    background: rgb(255, 170, 170);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 26px 0;
+    text-align: center;
+}
+
+.footer p{
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;/* スクロールの速さを制御 */
+}
+p.pagetop {
+    position: fixed;/* 右下に固定 */
+    bottom: 16px;/* 下から16px */
+    right: 16px;/* 右から16px */
+    opacity: 0.20;/* 透過20% */
+}
+p.pagetop a {
+    display: block;
+    text-decoration: none;
+}
+p.pagetop:hover {
+    opacity: 0.85;/* 透過85% */
+}
+
+
+/* 20211025 モバイル版 追加
+------------------------------- */
+@media(max-width: 800px){
+    main{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    section p {
+        padding: 0; /* スマホ用では内部余白なし */
+    }
+    main section:nth-child(1) p, /* 1つ目と3つ目のsection */
+    main section:nth-child(3) p {
+        width: 95%;
+        margin: auto;
+        box-sizing: border-box;
+        float: none; /* floatの解除 */
+    }
+}

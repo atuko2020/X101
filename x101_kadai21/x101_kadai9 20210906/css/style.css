@@ -1,0 +1,22 @@
+@charset "utf-8";
+body{
+    background-image: url(../images/bg.png);
+}
+
+h1{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    background-color: rgb(255, 170, 170);
+}
+
+h2{
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    background-color: rgb(36, 241, 36);
+    color: rgb(139, 102, 211);
+}
+
+p{
+    font-family: "ヒラギノ丸ゴ Pro W4","Hiragino Maru Gothic Pro", sans-serif;
+    text-align: justify;
+    line-height: 1.7;
+    color: rgb(0, 0, 0);
+}
