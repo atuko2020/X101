@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+/* リセット  */
+body, div, h1, h2, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* 全体 */
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #FFF;
+    font-size: 16px;
+    font-family: 'Pangolin', cursive;
+    line-height: 1.6;
+    letter-spacing: 0.1rem;
+}
+#container{
+    background: #FFF;
+    width: 100%;
+    /*max-width: 840px;*/
+    margin: 0 auto;
+}
+#wrapper{
+    overflow: hidden;
+}
+
+/*ヘッダ*/
+.logo{
+    width: 210px;
+    margin-top: 14px;
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+}
+
+#gallery{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/kikyu2.jpg);
+    /*background-color: #fff;*//*画像にマスクをかける*/
+    background-blend-mode: /*overlay*/normal;/*ブレンドモード*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+h1{
+    color: cadetblue;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+h1.logo{
+    text-align: left;
+}
+h1.logo img{
+    vertical-align: bottom;
+    padding: 0 1rem;
+}
+
+/*コンテンツ*/
+section{
+    margin-bottom: 15px;
+}
+section h2{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px 0 4px 1.1em;
+    background-color: #a7eeee;
+    border-left: 6px solid #97cdf3;
+}
+section p{
+    color: #333;
+    font-size: 0.875em;
+    margin: 0 1em 20px 2em;
+}
+
+/*フッター*/
+footer{
+    background-color: #a7eeee;
+    color: #FFF;
+    clear: both;
+    border-top: solid 1px #AAA;
+    border-bottom: solid 1px #AAA;
+    padding: 10px 0 12px 0;
+    text-align: center;
+}
+footer p small{
+    font-size: 0.8em;
+}
+
+/*TOPへのリンク*/
+p.pagetop{
+    position: fixed;/*右下に固定*/
+    bottom: 16px;
+    right: 16px;
+    opacity: 0.55;
+}
+p.pagetop a{
+    display: block;
+    text-decoration: none;
+}
+p.pagetop:hover{
+    opacity: 0.85;
+}
+
+/*アニメーション*/
+/*gallerly 見出し*/
+#gallery h2.page-title{
+    font-size: 6rem;
+    color: #FFF;
+    margin: 15% 0 0 30%;
+    justify-content: center;
+    opacity:0;
+    animation-name:sample01;
+    animation-duration:2.5s; 
+    animation-iteration-count: initial;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sample01 {
+    0% {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*背景　アニメーション fadeinbg*/
+@keyframes fadeinbg{
+    from{
+        opacity: 0;
+        transform: translateZ(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+/*見出し　アニメーション fadein*/
+@keyframes slidein{
+    from{
+        opacity: 0;
+        transform: translate(0%,0%);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1.5) translate(30%,100px);
+    }
+}
+
+/* Mobile ====================================================*/
+@media screen and (max-width:767px){
+    /*ヘッダー*/
+    #gallery{
+        height: 260px;
+    }
+    h1{
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+    #gallery h2.page-title{
+        font-size: 2rem;
+    }
+    /*見出し　アニメーション fadein*/
+    @keyframes slidein{
+        from{
+            opacity: 0;
+            transform: translate(0%,0%);
+        }
+        to{
+            opacity: 1;
+            transform: translate(10%, 150px);
+        }
+    }
+}
